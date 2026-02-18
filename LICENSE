@@ -1,21 +1,61 @@
-MIT License
+claude-skills Community License Agreement
 
-Copyright (c) 2025
+Version 1.0, February 2026
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+"Agreement" means the terms and conditions for use, reproduction, distribution, and modification of the Licensed Materials set forth herein.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+"Licensed Materials" means, collectively, the skill files, documentation, reference materials, evaluation files, and any other content made available under this Agreement in this repository.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+"Licensor" means the copyright holder(s) who make the Licensed Materials available under this Agreement.
+
+"Licensee" or "you" means you, or your employer or any other person or entity (if you are entering into this Agreement on such person's or entity's behalf), of the age required under applicable laws, rules, or regulations to provide legal consent, and that has legal authority to bind your employer or such other person or entity if you are entering in this Agreement on their behalf.
+
+"Derivative Work" means any work based on the Licensed Materials, including but not limited to modifications, adaptations, translations, or any work that incorporates a substantial portion of the Licensed Materials.
+
+By using or distributing any portion of the Licensed Materials, you agree to be bound by this Agreement.
+
+1. License Grant and Conditions
+
+   a. Grant of Rights. You are granted a non-exclusive, worldwide, non-transferable, and royalty-free limited license to use, reproduce, distribute, copy, create derivative works of, and make modifications to the Licensed Materials, subject to the conditions in this Agreement.
+
+   b. Attribution. If you distribute or make available the Licensed Materials, any Derivative Work, or a product or service that incorporates any of them, you shall:
+
+      i. Provide a copy of this Agreement with any such materials; and
+
+      ii. Retain in all copies the following attribution notice within a "NOTICE" or "LICENSE" file distributed as part of such copies: "This work includes materials from claude-skills, licensed under the claude-skills Community License Agreement."
+
+   c. Share-Alike. If you distribute or make available any Derivative Work, you must distribute the Derivative Work under the terms of this Agreement or a compatible license that (A) requires attribution to the original Licensed Materials, and (B) requires that further derivative works are distributed under the same or a compatible license. You must make the source form of your modifications available under the same terms.
+
+   d. No Sublicensing. You may not sublicense the Licensed Materials under different terms. All recipients of the Licensed Materials or Derivative Works receive their rights directly under this Agreement.
+
+2. Commercial Use Threshold
+
+   If, in the most recently completed fiscal year, the annual consolidated revenue of Licensee, or Licensee's affiliates, exceeds one billion United States dollars ($1,000,000,000 USD), you must request a commercial license from the Licensor, and you are not authorized to exercise any of the rights under this Agreement unless or until the Licensor expressly grants you such rights under a separate commercial agreement.
+
+   For the avoidance of doubt: if your organization's annual revenue is below this threshold, you may use the Licensed Materials for any purpose (including commercial use) under the terms of this Agreement without requesting a separate license.
+
+3. Disclaimer of Warranty
+
+   UNLESS REQUIRED BY APPLICABLE LAW, THE LICENSED MATERIALS ARE PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND, AND THE LICENSOR DISCLAIMS ALL WARRANTIES OF ANY KIND, BOTH EXPRESS AND IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. YOU ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF USING OR REDISTRIBUTING THE LICENSED MATERIALS AND ASSUME ANY RISKS ASSOCIATED WITH YOUR USE OF THE LICENSED MATERIALS AND ANY OUTPUT AND RESULTS.
+
+4. Limitation of Liability
+
+   IN NO EVENT WILL THE LICENSOR OR ITS AFFILIATES BE LIABLE UNDER ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, TORT, NEGLIGENCE, PRODUCTS LIABILITY, OR OTHERWISE, ARISING OUT OF THIS AGREEMENT, FOR ANY LOST PROFITS OR ANY INDIRECT, SPECIAL, CONSEQUENTIAL, INCIDENTAL, EXEMPLARY, OR PUNITIVE DAMAGES, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF ANY OF THE FOREGOING.
+
+5. Intellectual Property
+
+   a. No trademark licenses are granted under this Agreement.
+
+   b. Ownership of any Derivative Work is retained by the creator of such Derivative Work, subject to the Licensor's ownership of the original Licensed Materials and the share-alike obligations in Section 1.c.
+
+6. Term and Termination
+
+   a. The term of this Agreement commences upon your acceptance of this Agreement or access to the Licensed Materials and continues in full force and effect until terminated.
+
+   b. The Licensor may terminate this Agreement if you are in material breach of any term. Upon termination, you must delete and cease use of the Licensed Materials. Sections 3, 4, and 5 survive termination.
+
+   c. If you institute litigation or other proceedings against the Licensor or any entity alleging that the Licensed Materials, or any portion thereof, constitutes infringement of intellectual property or other rights owned or licensable by you, then any licenses granted to you under this Agreement shall terminate as of the date such litigation or claim is filed.
+
+7. Governing Law and Jurisdiction
+
+   This Agreement will be governed and construed under the laws of England and Wales without regard to conflict of law principles. The courts of England and Wales shall have exclusive jurisdiction over any dispute arising from this Agreement.

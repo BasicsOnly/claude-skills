@@ -60,4 +60,4 @@ Built against empirically validated prompt engineering research:
 
 ## License
 
-MIT
+[claude-skills Community License](./LICENSE)

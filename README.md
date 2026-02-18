@@ -19,4 +19,4 @@ Alternatively, use the `.skill` package files where available.
 
 ## License
 
-MIT
+[claude-skills Community License](./LICENSE): free for individuals and organizations under $1B annual revenue. Attribution and share-alike required for derivatives. Organizations above $1B revenue must request a commercial license.
