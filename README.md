@@ -1,77 +1,60 @@
 # claude-skills
 
-Battle-tested skills for Claude. Planning pipelines, multi-persona audits, and more.
+Skills for Claude that took real effort to get right.
 
 ## Skills
 
 | Skill | What it does | Status | Download |
 |-------|-------------|--------|----------|
-| [planning-skill](./planning-skill/) | 6-phase pipeline that transforms project ideas into battle-tested execution plans. Works for software, process design, strategy, content, research, and office automation. | ✅ Ready | [planning-skill.skill](https://github.com/BasicsOnly/claude-skills/releases/download/planning-skill-v1.0/planning-skill.skill) |
+| [planning-skill](./planning-skill/) | 6-phase pipeline: idea to execution plan. Software, processes, strategy, content, research. | ✅ Ready | [planning-skill.skill](https://github.com/BasicsOnly/claude-skills/releases/download/planning-skill-v1.0/planning-skill.skill) |
 
 ## Installation
 
-Each skill folder contains a `SKILL.md` orchestrator and supporting reference files. To install:
+Copy the skill folder into your Claude skills directory. It triggers automatically based on the frontmatter in `SKILL.md`.
 
-1. Copy the skill folder into your Claude skills directory
-2. The skill triggers automatically based on the description in its `SKILL.md` frontmatter
-
-Alternatively, use the `.skill` package files where available.
+Or download the `.skill` package from the release link above.
 
 ---
 
 ## planning-skill
 
-Most AI-assisted projects fail the same way: you describe an idea, the AI jumps straight to building, and the output is a superficial first draft riddled with gaps, missing edge cases, and assumptions nobody validated. You spend more time fixing than you saved.
+You describe a project idea to Claude. Claude starts building immediately. The output has gaps, missed edge cases, and assumptions nobody checked. You spend the next hour patching things that should have been caught before the first line was written.
 
-The planning skill exists to fix this. It forces a structured pipeline between "I have an idea" and "start executing" that catches problems when they're cheap to fix (a 2-minute conversation) instead of expensive to fix (a failed deployment, a derailed process, a wasted sprint).
+This skill sits between the idea and the building. Six phases, each one narrowing the space for error, each one reading the previous phase's output fresh from disk so nothing degrades over a long session.
 
-It works for any project type: software, process redesign, strategic planning, content pipelines, research synthesis, office automation.
+It works for code. It also works for process redesign, strategic plans, content workflows, research synthesis, and office automation. The phases adapt their depth and focus to whatever you're planning.
 
-### The pipeline
+### How it works
 
-The skill runs 6 phases in sequence. Each phase reads the previous phase's output from disk (preventing context degradation), applies a distinct analytical lens, and writes a refined artifact. The user has explicit approval gates at key transitions.
+**Phase 1: Brainstorm.**
+You talk through the idea. The skill pushes back, one question at a time. What problem is this solving? Who actually has that problem? What evidence supports the scope you're proposing? It keeps going until the problem, scope, constraints, and success criteria are pinned down in a concept brief. Most projects go wrong here (building the wrong thing, or the right thing at the wrong scale), so this phase is deliberately slow.
 
-**Phase 1: Collaborative Brainstorm**
-A structured discovery session that stress-tests the idea before any planning begins. The skill asks hard questions one at a time: What problem does this actually solve? Who has it? What evidence supports the assumptions? Where is the scope too broad for a single execution cycle? The output is a concept brief with clear problem definition, scope boundaries, success criteria, and key decisions.
+**Phase 2: Plan.**
+The concept brief becomes a full blueprint. Every major decision names what was considered and why the chosen option won. Software projects get file trees and schemas. Process projects get stage owners and SLAs. Strategy work gets assumption registers and decision criteria. The plan is sequenced so each milestone can be tested on its own. No task depends on something built later.
 
-The value here is friction. Most projects skip straight to "how" without nailing "what" and "why." This phase prevents the most expensive mistake in project work: building the wrong thing.
+**Phase 3: Refine.**
+A reviewer pass that reads the plan the way an executor would: someone who has to turn these words into action with zero follow-up questions. Every vague word gets flagged. "Handle errors gracefully" becomes retry logic with specific counts, delays, and fallback behavior. "Follow standard onboarding procedures" becomes 12 named steps with owners and deadlines. Each finding includes the exact replacement text, ready to paste in.
 
-**Phase 2: Detailed Plan**
-Converts the validated concept brief into a full project blueprint. Every significant choice includes rationale with named alternatives ("We chose X over Y because Z"). Sections adapt to project type: software projects get file trees and schemas, process projects get stage definitions and SLAs, strategic plans get assumption registers and decision criteria.
+**Phase 4: Convert.**
+The reviewed plan becomes step-by-step instructions. One action per step. Every file to be created includes its full contents inline. Every reference includes the literal value. Every step has a verification check so the executor knows whether it worked. The instructions assume the executor knows nothing about the project's history. An AI assistant, a teammate, or a mix of both can follow the same document.
 
-The execution sequence is ordered so every milestone produces a testable intermediate state. No forward dependencies: every task's inputs come from a prior task or the prerequisites.
+**Phase 5: Audit.**
+A hostile pass that walks through the instructions and looks for what breaks. Missing prerequisites that will crash step 1. Data that one step produces in a format the next step doesn't expect. Silent failures that look like success. Environment assumptions that hold on your machine but not on the target.
 
-**Phase 3: Refine**
-A senior-reviewer pass that reads the plan as an executor would. Finds every vague word ("appropriate," "as needed," "standard"), every missing step, every inconsistent reference. For each finding, proposes exact replacement text ready to apply.
+For high-stakes work (enterprise proposals, documents going to a F500 C-suite, cross-team process launches), the skill spins up a multi-persona review panel. Eight to twelve simulated reviewers with different professional backgrounds (technical, financial, procurement, executive, design, independent strategy) each review independently. Findings are consolidated with data on how many reviewers flagged the same issue and whether any of them sit in the approval chain.
 
-This is where "add relevant validation" becomes "validate email format with RFC 5322 regex, reject duplicates against existing records, return specific error codes per failure type." The gap between those two statements is where execution fails.
+**Phase 6: Defend.**
+Every audit finding gets argued against before it's accepted. The question for each one: is this a real failure that will actually happen during execution, or a theoretical concern that adds complexity without reducing risk? Findings that survive get applied. The rest get documented and set aside.
 
-**Phase 4: Convert to Execution Steps**
-Transforms the human-readable plan into zero-ambiguity instructions. Every step is atomic (one action), self-contained (no assumed context), and verifiable (concrete success criteria). Creation steps include complete inline content: full file contents, complete template text, exact configuration values.
+The output is one file. It references no conversation history, no earlier drafts, no context outside itself. Someone picking it up cold should be able to execute it on the first attempt.
 
-The target executor could be an AI assistant operating autonomously, a team member following the plan independently, or a hybrid. The document works for all three because it assumes zero prior context.
+### Why you'd use it
 
-**Phase 5: Hostile Audit**
-An adversarial review that simulates execution step-by-step, looking for what breaks. Attack vectors are prioritized by failure frequency: missing prerequisites, integration gaps between steps, silent failures, ambiguous instructions, external dependency fragility, environment assumptions, edge cases, and weak verification.
+The short version: you've tried asking Claude to plan something and the plan had holes. Steps were missing. Details were vague. It worked for the happy path and fell apart on the first edge case.
 
-For high-stakes deliverables (enterprise proposals, F500-facing documents, cross-functional process launches), the skill activates a multi-persona audit panel: 8-12 reviewers with different professional frames (technical, financial, procurement, executive, design, strategy) each reviewing independently before findings are consolidated with consensus metadata.
+This skill exists because planning is where AI assistants are weakest and where the cost of getting it wrong compounds fastest. A bad plan produces bad code, a bad process, a bad document. Catching a missing database migration step in Phase 3 costs two minutes of conversation. Catching it in production costs an afternoon.
 
-**Phase 6: Steelman Defense**
-Every audit finding gets a genuine defense before being accepted. This prevents over-engineering from theoretical concerns. Each finding is evaluated on probability of actual failure, cost of the fix versus cost of the failure, and whether it addresses a real execution risk or a hypothetical preference.
-
-Findings that survive scrutiny get applied. The final output is a single self-contained document that references no conversation history, no prior artifacts, and no assumed context. The acid test: could someone with zero prior knowledge execute this document successfully on their first attempt?
-
-### What you get
-
-One file: `FINAL_EXECUTION_PLAN.md`. Everything else is intermediate work product. The final document is deployment-ready, whether "deployment" means running a script, launching a process, shipping a document, or executing a strategy.
-
-### When to use it
-
-- You have a project idea and want to maximize first-attempt success rate
-- You're handing off execution to someone (or something) that needs precise instructions
-- The project is complex enough that gaps in planning will cause expensive rework
-- You want structured adversarial review before committing resources
-- You need a repeatable planning process across different project types
+Use it when the project is complex enough that you wouldn't hand it to a new hire without written instructions. Use it when you're handing off to someone (human or AI) who won't have you available to answer "what did you mean by this?" Use it when the cost of a failed first attempt is high enough to justify 30 minutes of structured planning.
 
 [Browse the source](./planning-skill/) · [Download planning-skill.skill](https://github.com/BasicsOnly/claude-skills/releases/download/planning-skill-v1.0/planning-skill.skill)
 
