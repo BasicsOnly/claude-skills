@@ -16,7 +16,7 @@
 ╰──────────────────────────────────────────────────────╯
 ```
 
-Skills for Claude that took real effort to get right.
+Skills for Claude that work.
 
 ## Skills
 
