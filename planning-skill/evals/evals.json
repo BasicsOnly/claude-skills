@@ -1,0 +1,120 @@
+{
+  "skill_name": "planning-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to build a CLI tool that batch-renames files using regex patterns. It should work on macOS and Linux, support dry-run mode, and handle nested directories.",
+      "expected_output": "Phase 1 brainstorm dialogue exploring: data source (local filesystem), scope calibration (v1 features vs deferred), solution shape (CLI, not web app), success criteria (concrete testable conditions). Produces concept_brief.md upon user confirmation.",
+      "files": [],
+      "assertions": [
+        "Asks one focused clarifying question before proposing any technical solution",
+        "Challenges scope or assumptions at least once during brainstorming",
+        "Produces a concept_brief.md file with problem statement, scope boundaries, and success criteria",
+        "Keeps Phase 1 focused on exploration; produces no technology stack decisions or architecture during this phase",
+        "Waits for explicit user confirmation before moving to Phase 2",
+        "Updates PROGRESS.md after Phase 1 completion"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have a project idea: a web dashboard that pulls data from the GitHub API to show my team's PR review metrics (time to first review, time to merge, review counts per person). I want it deployed on Vercel. Let's skip the brainstorm and go straight to building a plan - here's my concept brief:\n\n# Concept Brief: PR Metrics Dashboard\n## Problem: Our team has no visibility into PR review bottlenecks\n## Solution: A web dashboard showing review metrics per team member\n## Scope: GitHub API integration, 3 metrics, single team, last 30 days\n## Success: Dashboard loads in under 3 seconds showing accurate metrics for 5 team members",
+      "expected_output": "Skips Phase 1 (concept brief provided). Enters Phase 2 to generate detailed_plan.md with approach, execution sequence, risk handling, and deployment. Then proceeds through Phases 3-6.",
+      "files": [],
+      "assertions": [
+        "Respects the user's request to skip Phase 1 brainstorming",
+        "Re-reads the provided concept brief from disk as Phase 2 input",
+        "Produces a detailed_plan.md with rationale for each major choice naming alternatives",
+        "Plan includes GitHub API rate limit handling",
+        "Execution sequence has no forward dependencies",
+        "Creates PROGRESS.md to track phase completion"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our client onboarding process takes 3 weeks from signed contract to first deliverable. The CEO wants it under 1 week. We're a 30-person consulting firm. The bottleneck seems to be everywhere: intake forms take forever to get back, resource allocation is a mess, and the kickoff meeting never happens on time. Help me plan a redesign.",
+      "expected_output": "Phase 1 brainstorm exploring: current process mapping (where time accumulates), bottleneck diagnosis (client-side vs internal delays), scope calibration (which stages to redesign vs leave alone), constraints (existing tools, headcount), success criteria (measurable time targets per stage).",
+      "files": [],
+      "assertions": [
+        "Asks about the current end-to-end process before proposing solutions",
+        "Distinguishes between internal delays and client-side delays",
+        "Challenges whether all stages need redesign or just the bottlenecks",
+        "Explores constraints: existing tools, team capacity, budget",
+        "Defines success criteria in measurable terms with specific targets per stage",
+        "Asks one question at a time rather than multi-part questions"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I already have a build plan for my project but it keeps failing when I try to have an AI assistant execute it. Can you audit it and make it bulletproof? Here's my plan:\n\n# Build Plan: Todo API\n## Architecture: Express.js REST API with PostgreSQL\n## Steps:\n1. Set up project with npm init\n2. Install dependencies\n3. Create database\n4. Set up routes for CRUD operations\n5. Add error handling\n6. Deploy to Railway\n\nThat's it. Every time the AI tries to build this, it makes different choices and the result is inconsistent.",
+      "expected_output": "Enters at Phase 3 (refinement) since a plan exists but is severely underspecified. Identifies massive gaps: no file structure, no schema, no specific routes, no error handling specs, no configuration. Refines with user, then proceeds through Phases 4-6.",
+      "files": [],
+      "assertions": [
+        "Identifies the plan as severely underspecified rather than accepting it at face value",
+        "Enters at Phase 3 (refine) since a plan already exists",
+        "Identifies at least 5 specific gaps: missing schema, missing file paths, vague error handling, missing route specifications, missing deployment config",
+        "Proposes concrete replacement text for each vague instruction",
+        "Explains that the inconsistent execution results come from ambiguity forcing unguided decisions",
+        "Re-reads the provided plan from disk before reviewing"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I have 150 customer interview transcripts (30-60 minutes each) from the last quarter. I need to synthesize them into a research report that identifies the top 5 pain points, quantifies how many customers mentioned each one, and includes representative quotes. The report goes to our product team to inform the Q3 roadmap. Help me plan this.",
+      "expected_output": "Phase 1 brainstorm exploring: transcript format and quality, coding methodology (deductive vs inductive), tooling for analysis at this scale, what 'representative quotes' means (selection criteria), output format and audience expectations, timeline constraints.",
+      "files": [],
+      "assertions": [
+        "Asks about transcript format (audio, text, structured notes) and quality",
+        "Explores analysis methodology: pre-defined categories vs emergent themes",
+        "Questions how to handle scale: 150 transcripts needs tooling or sampling strategy",
+        "Probes what makes a quote 'representative' and what selection criteria apply",
+        "Explores the output format the product team expects",
+        "Considers timeline: 150 transcripts takes significant processing time"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "I need to build a tool that generates enterprise sales assessment documents. It takes a company name, pulls data from public sources and our CRM, and produces a 15-page PDF with company overview, pain point analysis, our solution mapping, ROI projections, and implementation timeline. The output gets presented to F500 C-suite executives and reviewed by their procurement team. Plan this with the full pipeline, and when you get to the audit phase, I want a serious multi-stakeholder review, not just a technical audit.",
+      "expected_output": "Full pipeline execution. At Phase 5, the audit should construct a multi-persona review panel with independent reviewers representing the actual audience: client-side stakeholders (business, technical, finance, procurement, executive), internal account lead, senior strategy consultants, and a design expert. Each reviewer conducts independent review, then findings are consolidated with agreement patterns.",
+      "files": [],
+      "assertions": [
+        "Phases 1-4 execute normally with appropriate artifacts written to disk",
+        "Phase 5 audit recognizes that the deliverable's audience (F500 C-suite, procurement) demands multi-persona review",
+        "Constructs a review panel with at least: internal stakeholder, 3+ client-side stakeholders with distinct roles, independent evaluators",
+        "Each reviewer operates independently before consolidation",
+        "Consolidated findings note which reviewers converged on the same issue",
+        "Findings include stakeholder-specific concerns (procurement contract risk, CFO audit requirements, CTO integration questions)",
+        "Phase 6 steelman defense weighs reviewer consensus count when evaluating findings",
+        "Final plan addresses both execution correctness and audience-specific quality standards"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Every month I manually pull data from 3 spreadsheets, combine them, calculate commissions for our 12-person sales team, generate individual commission statements as PDFs, and email them to each rep plus their manager. It takes me 2 full days. Help me plan how to automate this.",
+      "expected_output": "Phase 1 brainstorm exploring: current manual process (exact steps, decision points, exceptions), data sources (spreadsheet formats, locations, access), business rules (commission calculation logic, edge cases like split deals or clawbacks), output requirements (PDF format, email recipients, approval workflow), constraints (budget, technical skill level, tools already available).",
+      "files": [],
+      "assertions": [
+        "Maps the current manual process before proposing automation",
+        "Asks about the commission calculation rules and edge cases (split deals, clawbacks, adjustments)",
+        "Explores which parts genuinely need automation vs which are fine as manual checkpoints",
+        "Asks about the approval workflow: does anyone review commissions before they go out",
+        "Probes data quality: are the 3 spreadsheets consistent, clean, and reliably available",
+        "Asks about error handling: what happens when the data is wrong or incomplete",
+        "Considers the user's technical skill level when calibrating solution complexity"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "We're a B2B SaaS company with 200 customers, mostly in Germany. The board wants us to expand into the UK market within 12 months. We have no UK presence, no UK customers, and no UK employees. Our product is in English but all our sales materials, case studies, and support documentation are in German. Help me plan this.",
+      "expected_output": "Phase 1 brainstorm exploring: evidence of UK demand (validated vs assumed), competitive landscape in UK, go-to-market approach (direct vs partner-led vs hybrid), resource requirements (hiring, legal entity, localization), regulatory differences, realistic timeline assessment, success criteria beyond 'enter the market'.",
+      "files": [],
+      "assertions": [
+        "Challenges whether board's 12-month timeline is realistic given zero UK presence",
+        "Asks about evidence of UK demand before assuming expansion is warranted",
+        "Explores go-to-market alternatives (direct sales, partner-led, channel) with tradeoffs",
+        "Identifies non-obvious dependencies: UK legal entity, data residency, payment processing, support timezone coverage",
+        "Defines success criteria in measurable terms (pipeline, revenue, customer count) not just 'entered the market'",
+        "Distinguishes between localization scope (sales materials vs product vs support) and sequences them by priority"
+      ]
+    }
+  ]
+}
