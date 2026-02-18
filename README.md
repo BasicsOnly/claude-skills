@@ -4,9 +4,9 @@ Battle-tested skills for Claude. Planning pipelines, multi-persona audits, and m
 
 ## Skills
 
-| Skill | What it does | Status |
-|-------|-------------|--------|
-| [planning-skill](./planning-skill/) | 6-phase pipeline that transforms project ideas into battle-tested execution plans. Works for software, process design, strategy, content, research, and office automation. | ✅ Ready |
+| Skill | What it does | Status | Download |
+|-------|-------------|--------|----------|
+| [planning-skill](./planning-skill/) | 6-phase pipeline that transforms project ideas into battle-tested execution plans. Works for software, process design, strategy, content, research, and office automation. | ✅ Ready | [planning-skill.skill](https://github.com/BasicsOnly/claude-skills/releases/download/planning-skill-v1.0/planning-skill.skill) |
 
 ## Installation
 
