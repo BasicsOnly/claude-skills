@@ -1,19 +1,19 @@
 # claude-skills
 
 ```
-╭──────────────────────────────────────────────────────╮
-│ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-│ ░                                                  ░ │
-│ ░  CLAUDE : : SKILLS                               ░ │
-│ ░                                                  ░ │
-│ ░  sys.init ............................... OK      ░ │
-│ ░  loading skills ......................... 1       ░ │
-│ ░  planning-skill v1.0 ............. [ACTIVE]      ░ │
-│ ░  ??? ............................ [PENDING]       ░ │
-│ ░  ??? ............................ [PENDING]       ░ │
-│ ░                                                  ░ │
-│ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-╰──────────────────────────────────────────────────────╯
++------------------------------------------------------+
+|  ====================================================|
+|                                                      |
+|    CLAUDE : : SKILLS                                 |
+|                                                      |
+|    sys.init ................................. OK      |
+|    loading skills ........................... 1       |
+|    planning-skill v1.0 ............... [ACTIVE]      |
+|    ??? .............................. [PENDING]       |
+|    ??? .............................. [PENDING]       |
+|                                                      |
+|  ====================================================|
++------------------------------------------------------+
 ```
 
 Skills for Claude that work.
@@ -35,22 +35,22 @@ Or download the `.skill` package from the release link above.
 ## planning-skill
 
 ```
-╭──────────────────────────────────────────────────────╮
-│ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-│ ░                                                  ░ │
-│ ░  PLANNING : : SKILL                              ░ │
-│ ░                                                  ░ │
-│ ░  [1] brainstorm ......... define the problem     ░ │
-│ ░  [2] plan ............... blueprint it           ░ │
-│ ░  [3] refine ............. kill the vagueness     ░ │
-│ ░  [4] convert ............ step-by-step           ░ │
-│ ░  [5] audit .............. break it on paper      ░ │
-│ ░  [6] defend ............. keep what survives     ░ │
-│ ░                                                  ░ │
-│ ░  output: FINAL_EXECUTION_PLAN.md                 ░ │
-│ ░                                                  ░ │
-│ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
-╰──────────────────────────────────────────────────────╯
++------------------------------------------------------+
+|  ====================================================|
+|                                                      |
+|    PLANNING : : SKILL                                |
+|                                                      |
+|    [1] brainstorm ......... define the problem       |
+|    [2] plan ............... blueprint it             |
+|    [3] refine ............. kill the vagueness       |
+|    [4] convert ............ step-by-step             |
+|    [5] audit .............. break it on paper        |
+|    [6] defend ............. keep what survives       |
+|                                                      |
+|    output: FINAL_EXECUTION_PLAN.md                   |
+|                                                      |
+|  ====================================================|
++------------------------------------------------------+
 ```
 
 You describe a project idea to Claude. Claude starts building immediately. The output has gaps, missed edge cases, and assumptions nobody checked. You spend the next hour patching things that should have been caught before the first line was written.
